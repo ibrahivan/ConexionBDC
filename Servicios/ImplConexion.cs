@@ -18,7 +18,7 @@ namespace JdbcConexionPostgresql.Servicios
         {
             //Se lee la cadena de conexión a bbdd del archivo de configuración
             string stringConexion = ConfigurationManager.ConnectionStrings["stringConexion"].ConnectionString;
-            Console.WriteLine("[INFORMACIÓN-ImplConexion-generarConexion] Cadena conexión: " + stringConexion);
+            
 
             NpgsqlConnection conexion = null;
             string estado = "";
