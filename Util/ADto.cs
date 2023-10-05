@@ -1,4 +1,4 @@
-﻿using JdbcConexionPostgresql.Dtos;
+﻿using ConexionBDC.Dtos;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JdbcConexionPostgresql.Util
+namespace ConexionBDC.Util
 {
     /// <summary>
     /// Métodos que pasan a objeto de tipo DTO
@@ -19,11 +19,11 @@ namespace JdbcConexionPostgresql.Util
             while (resultadoConsulta.Read())
             {
                 listaLibros.Add(new LibroDto(
-                    long.Parse(resultadoConsulta[0].ToString()),
-                    resultadoConsulta[1].ToString(),
-                    resultadoConsulta[2].ToString(),
-                    resultadoConsulta[3].ToString(),
-                    (int)Int64.Parse(resultadoConsulta[4].ToString())
+                     resultadoConsulta.GetInt64(resultadoConsulta.GetOrdinal("id_libro")),
+                    resultadoConsulta.GetString(resultadoConsulta.GetOrdinal("titulo")),
+                    resultadoConsulta.GetString(resultadoConsulta.GetOrdinal("autor")),
+                    resultadoConsulta.GetString(resultadoConsulta.GetOrdinal("isbn")),
+                    resultadoConsulta.GetInt32(resultadoConsulta.GetOrdinal("edicion"))
                     )
                     );
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JdbcConexionPostgresql.Servicios
+namespace ConexionBDC.Servicios
 {
     /// <summary>
     /// Interfaz que define los métodos para generar conexiones a base de datos

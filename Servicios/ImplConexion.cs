@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JdbcConexionPostgresql.Servicios
+namespace ConexionBDC.Servicios
 {
     /// <summary>
     /// Implementación de la interfaz de conexión a postgresql

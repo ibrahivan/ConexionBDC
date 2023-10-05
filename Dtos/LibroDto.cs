@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JdbcConexionPostgresql.Dtos
+namespace ConexionBDC.Dtos
 {
     internal class LibroDto
     {
@@ -39,6 +39,13 @@ namespace JdbcConexionPostgresql.Dtos
 
         public LibroDto()
         {
+        }
+
+    
+    public String toString()
+        {
+            return "Libro => idLibro=" + id_libro + ", titulo=" + titulo + ", autor=" + autor + ", isbn=" + isbn
+                    + ", edicion=" + edicion + "";
         }
     }
 }
